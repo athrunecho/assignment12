@@ -1,0 +1,20 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: letsencrypt-dns
+  namespace: istio-system
+spec:
+  acme:
+    email: chengguo.fan@outlook.com
+    preferredChain: ""
+    privateKeySecretRef:
+      name: letsencrypt-dns
+    server: https://acme-v02.api.letsencrypt.org/directory
+    solvers:
+    - dns01:
+        route53:
+          accessKeyID: AKIAWW5HKFWSYFWO7YVH
+          region: us-east-1
+          secretAccessKeySecretRef:
+            key: secret-access-key
+            name: rout53-sealed-secret
