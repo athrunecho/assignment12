@@ -1,4 +1,3 @@
-➜  assignment12 git:(main) ✗ vi cert.yaml                                            (shoot--eureka--uat/default)
 apiVersion: networking.istio.io/v1beta1
 kind: Gateway
 metadata:
